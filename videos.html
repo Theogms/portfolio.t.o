@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidéos réalisées — T.O Portfolio</title>
+  <meta name="description" content="Découvrez les vidéos réalisées par Théo — formats courts et formats longs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="nav">
+    <a class="nav-logo" href="index.html">T.O ●</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil <span class="arrow">↗</span></a></li>
+      <li><a href="videos.html" class="active">Vidéos <span class="arrow">↗</span></a></li>
+      <li><a href="about.html" class="hide-sm">À propos <span class="arrow">↗</span></a></li>
+      <li><a href="contact.html">Contact <span class="arrow">↗</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ── MAIN ── -->
+  <main class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="videos-header">
+      <h1>VIDÉOS<br>RÉALISÉES</h1>
+      <div style="text-align:right;">
+        <p style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:#b0b0a8; margin-bottom:0.5rem;">Navigation</p>
+        <div style="display:flex; flex-direction:column; gap:0.4rem;">
+          <a href="#courts" style="font-family:'Space Mono',monospace; font-size:0.78rem; text-decoration:none; color:#0a0a0a; border: 2px solid #0a0a0a; padding:0.3rem 0.8rem; text-align:center; transition: background 0.15s, color 0.15s;" onmouseover="this.style.background='#0a0a0a';this.style.color='#f5f5f0';" onmouseout="this.style.background='';this.style.color='#0a0a0a';">→ Formats courts</a>
+          <a href="#longs" style="font-family:'Space Mono',monospace; font-size:0.78rem; text-decoration:none; color:#0a0a0a; border: 2px solid #0a0a0a; padding:0.3rem 0.8rem; text-align:center; transition: background 0.15s, color 0.15s;" onmouseover="this.style.background='#0a0a0a';this.style.color='#f5f5f0';" onmouseout="this.style.background='';this.style.color='#0a0a0a';">→ Formats longs</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== FORMATS COURTS ===== -->
+    <section class="video-section" id="courts">
+      <div class="video-section-header">
+        <div class="video-section-title">
+          Formats courts
+          <span class="section-badge">REELS / SHORTS / TIKTOK</span>
+        </div>
+        <span style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#b0b0a8;">< 3 min</span>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- Carte placeholder 1 -->
+        <article class="video-card video-card-placeholder">
+          <div class="video-thumbnail">
+            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+          </div>
+          <div class="video-meta">
+            <div class="video-meta-top">
+              <span class="video-type">Format court · 00:30</span>
+            </div>
+            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
+            <p class="video-desc">Description de votre vidéo...</p>
+          </div>
+        </article>
+
+        <!-- Carte placeholder 2 -->
+        <article class="video-card video-card-placeholder">
+          <div class="video-thumbnail">
+            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+          </div>
+          <div class="video-meta">
+            <div class="video-meta-top">
+              <span class="video-type">Format court · 01:00</span>
+            </div>
+            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
+            <p class="video-desc">Description de votre vidéo...</p>
+          </div>
+        </article>
+
+        <!-- Ajouter une vidéo -->
+        <div class="add-video-card">
+          <div class="add-icon">+</div>
+          <p class="add-text">Ajouter une vidéo</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FORMATS LONGS ===== -->
+    <section class="video-section" id="longs">
+      <div class="video-section-header">
+        <div class="video-section-title">
+          Formats longs
+          <span class="section-badge">DOCUMENTAIRES / COURTS-MÉTRAGES</span>
+        </div>
+        <span style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#b0b0a8;">> 3 min</span>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- Carte placeholder 1 -->
+        <article class="video-card video-card-placeholder">
+          <div class="video-thumbnail">
+            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+          </div>
+          <div class="video-meta">
+            <div class="video-meta-top">
+              <span class="video-type">Format long · 05:00</span>
+            </div>
+            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
+            <p class="video-desc">Description de votre vidéo...</p>
+          </div>
+        </article>
+
+        <!-- Carte placeholder 2 -->
+        <article class="video-card video-card-placeholder">
+          <div class="video-thumbnail">
+            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+          </div>
+          <div class="video-meta">
+            <div class="video-meta-top">
+              <span class="video-type">Format long · 10:00</span>
+            </div>
+            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
+            <p class="video-desc">Description de votre vidéo...</p>
+          </div>
+        </article>
+
+        <!-- Ajouter une vidéo -->
+        <div class="add-video-card">
+          <div class="add-icon">+</div>
+          <p class="add-text">Ajouter une vidéo</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2026 T.O Portfolio</span>
+    <span>Monteur vidéo / Motion designer</span>
+  </footer>
+
+  <a id="back-to-top" href="#" aria-label="Remonter en haut">↑</a>
+  <script>
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 200);
+    });
+    btn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>

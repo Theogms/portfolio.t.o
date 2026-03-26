@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — T.O Portfolio</title>
+  <meta name="description" content="En savoir plus sur Théo, monteur vidéo et motion designer étudiant en MMI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="nav">
+    <a class="nav-logo" href="index.html">T.O ●</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil <span class="arrow">↗</span></a></li>
+      <li><a href="videos.html">Vidéos <span class="arrow">↗</span></a></li>
+      <li><a href="about.html" class="active hide-sm">À propos <span class="arrow">↗</span></a></li>
+      <li><a href="contact.html">Contact <span class="arrow">↗</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ── MAIN ── -->
+  <main class="page-wrapper">
+
+    <!-- HEADER NOIR -->
+    <header class="about-header">
+      <h1>À PROPOS<br>DE MOI</h1>
+    </header>
+
+    <!-- GRID ABOUT -->
+    <div class="about-grid">
+
+      <!-- Contenu principal -->
+      <section class="about-main">
+        <p class="about-section-label">— Qui suis-je ?</p>
+
+        <!-- Placeholder pour le texte de l'utilisateur -->
+        <div class="about-text-placeholder">
+          <div>
+            <p>Votre texte personnalisé apparaîtra ici.</p>
+            <p style="margin-top:0.6rem; font-size:0.75rem;">Parlez de votre parcours, votre passion,<br>vos projets et votre vision créative.</p>
+          </div>
+        </div>
+
+        <p class="about-section-label" style="margin-top:2.5rem;">— Formation</p>
+        <div style="border: 2px solid #0a0a0a; padding: 1.5rem 2rem; display:flex; align-items:flex-start; gap:1.5rem;">
+          <div style="font-family:'Space Mono',monospace; font-size:2rem; font-weight:700; line-height:1; min-width:48px;">🎓</div>
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:#b0b0a8; margin-bottom:0.3rem;">En cours</div>
+            <div style="font-family:'Space Mono',monospace; font-size:1rem; font-weight:700;">MMI — Métiers du Multimédia et de l'Internet</div>
+            <div style="font-size:0.88rem; color:#3a3a35; margin-top:0.3rem;">Étudiant passionné par le montage vidéo, le motion design et la création de contenu digital.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="about-sidebar">
+        <div>
+          <p class="about-section-label">— Compétences</p>
+          <div class="skills-list">
+            <span class="skill-tag">Montage vidéo</span>
+            <span class="skill-tag">Motion design</span>
+            <span class="skill-tag">After Effects</span>
+            <span class="skill-tag">Premiere Pro</span>
+            <span class="skill-tag">Formats courts</span>
+            <span class="skill-tag">Formats longs</span>
+            <span class="skill-tag">Storytelling</span>
+          </div>
+        </div>
+
+        <div class="about-stat">
+          <div class="about-stat-num">MMI</div>
+          <div class="about-stat-label">Formation universitaire</div>
+        </div>
+
+        <div class="about-stat">
+          <div class="about-stat-num">▶</div>
+          <div class="about-stat-label">Passionné de montage</div>
+        </div>
+
+        <div style="margin-top: auto;">
+          <a href="contact.html" class="btn" style="width:100%; justify-content:center; margin-top:1.5rem;">Me contacter ↗</a>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2026 T.O Portfolio</span>
+    <span>Monteur vidéo / Motion designer</span>
+  </footer>
+
+  <a id="back-to-top" href="#" aria-label="Remonter en haut">↑</a>
+  <script>
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 200);
+    });
+    btn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>

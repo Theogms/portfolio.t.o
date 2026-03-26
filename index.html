@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T.O Portfolio — Monteur Vidéo / Motion Designer</title>
+  <meta name="description" content="Portfolio de Théo, monteur vidéo et motion designer, étudiant en MMI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="transitions.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="nav">
+    <a class="nav-logo" href="index.html">T.O ●</a>
+    <ul class="nav-links">
+      <li><a href="videos.html">Vidéos réalisées <span class="arrow">↗</span></a></li>
+      <li><a href="about.html">À propos de moi <span class="arrow">↗</span></a></li>
+      <li><a href="contact.html">Contact <span class="arrow">↗</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ── MAIN ── -->
+  <main class="page-wrapper">
+
+    <!-- HERO -->
+    <section class="home-hero" id="hero">
+      <div class="hero-left">
+        <div class="hero-tag">2026 — Portfolio</div>
+
+        <h1 class="hero-title">
+          <span>T.O</span>
+          <span>PORTFOLIO</span>
+        </h1>
+
+        <p class="hero-subtitle">Monteur vidéo / Motion designer</p>
+        <p class="hero-desc">
+          Étudiant en MMI et passionné de montage — je crée des expériences visuelles qui racontent des histoires.
+        </p>
+
+        <div class="hero-cta">
+          <a href="videos.html" class="btn btn-filled">Voir mes vidéos ↗</a>
+          <a href="contact.html" class="btn">Me contacter</a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-graphic">
+          <div class="graphic-box">
+            <div class="graphic-box-inner">▶</div>
+          </div>
+          <div class="graphic-orbs">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+      <span class="marquee-inner">
+        MONTAGE VIDÉO &nbsp;●&nbsp; MOTION DESIGN &nbsp;●&nbsp; MMI &nbsp;●&nbsp; FORMATS COURTS &nbsp;●&nbsp; FORMATS
+        LONGS &nbsp;●&nbsp; STORYTELLING &nbsp;●&nbsp; AFTER EFFECTS &nbsp;●&nbsp; PREMIERE PRO &nbsp;●&nbsp;
+        MONTAGE VIDÉO &nbsp;●&nbsp; MOTION DESIGN &nbsp;●&nbsp; MMI &nbsp;●&nbsp; FORMATS COURTS &nbsp;●&nbsp; FORMATS
+        LONGS &nbsp;●&nbsp; STORYTELLING &nbsp;●&nbsp; AFTER EFFECTS &nbsp;●&nbsp; PREMIERE PRO &nbsp;●&nbsp;
+      </span>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <nav class="quick-links" aria-label="Liens rapides">
+      <h3>Liens rapides</h3>
+      <div class="quick-links-grid">
+        <a href="videos.html" class="quick-link-item">Vidéos réalisées <span>↗</span></a>
+        <a href="about.html" class="quick-link-item">À propos de moi <span>↗</span></a>
+        <a href="contact.html" class="quick-link-item">Contact <span>↗</span></a>
+      </div>
+    </nav>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2026 T.O Portfolio</span>
+    <span>Monteur vidéo / Motion designer</span>
+  </footer>
+
+  <a id="back-to-top" href="#" aria-label="Remonter en haut">↑</a>
+  <script src="transitions.js"></script>
+  <script>
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 200);
+    });
+    btn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+
+</html>
