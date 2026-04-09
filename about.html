@@ -16,8 +16,8 @@
     <a class="nav-logo" href="index.html">T.O ●</a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil <span class="arrow">↗</span></a></li>
-      <li><a href="videos.html">Vidéos <span class="arrow">↗</span></a></li>
-      <li><a href="about.html" class="active hide-sm">À propos <span class="arrow">↗</span></a></li>
+      <li><a href="videos.html">Vidéos réalisées <span class="arrow">↗</span></a></li>
+      <li><a href="about.html" class="active hide-sm">À propos de moi <span class="arrow">↗</span></a></li>
       <li><a href="contact.html">Contact <span class="arrow">↗</span></a></li>
     </ul>
   </nav>
@@ -26,8 +26,15 @@
   <main class="page-wrapper">
 
     <!-- HEADER NOIR -->
-    <header class="about-header">
-      <h1>À PROPOS<br>DE MOI</h1>
+    <header class="about-header retro-hero-header">
+      <div class="retro-status">
+        <span class="retro-dot"></span>
+        SYSTÈME EN LIGNE — v2.0.2.6
+      </div>
+      <h1 class="hero-title">
+        <span>À PROPOS</span>
+        <span>DE MOI</span>
+      </h1>
     </header>
 
     <!-- GRID ABOUT -->
@@ -35,17 +42,21 @@
 
       <!-- Contenu principal -->
       <section class="about-main">
-        <p class="about-section-label">— Qui suis-je ?</p>
+        <div class="retro-status" style="margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px dashed var(--gray-mid);">
+          <span style="color:var(--yellow); font-weight:700;">></span> — Qui suis-je ?
+        </div>
 
         <!-- Placeholder pour le texte de l'utilisateur -->
-        <div class="about-text-placeholder">
+        <div class="graphic-box retro-placeholder-box" style="width: 100%; height: auto; text-align: left; align-items: flex-start; padding: 2.5rem; justify-content: flex-start;">
           <div>
             <p>Votre texte personnalisé apparaîtra ici.</p>
             <p style="margin-top:0.6rem; font-size:0.75rem;">Parlez de votre parcours, votre passion,<br>vos projets et votre vision créative.</p>
           </div>
         </div>
 
-        <p class="about-section-label" style="margin-top:2.5rem;">— Formation</p>
+        <div class="retro-status" style="margin-top:2.5rem; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px dashed var(--gray-mid);">
+          <span style="color:var(--yellow); font-weight:700;">></span> — Formation
+        </div>
         <div style="border: 2px solid #0a0a0a; padding: 1.5rem 2rem; display:flex; align-items:flex-start; gap:1.5rem;">
           <div style="font-family:'Space Mono',monospace; font-size:2rem; font-weight:700; line-height:1; min-width:48px;">🎓</div>
           <div>
@@ -59,7 +70,9 @@
       <!-- Sidebar -->
       <aside class="about-sidebar">
         <div>
-          <p class="about-section-label">— Compétences</p>
+          <div class="retro-status" style="margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px dashed var(--gray-mid);">
+            <span style="color:var(--pink); font-weight:700;">></span> — Compétences
+          </div>
           <div class="skills-list">
             <span class="skill-tag">Montage vidéo</span>
             <span class="skill-tag">Motion design</span>

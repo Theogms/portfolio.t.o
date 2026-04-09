@@ -16,8 +16,8 @@
     <a class="nav-logo" href="index.html">T.O ●</a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil <span class="arrow">↗</span></a></li>
-      <li><a href="videos.html" class="active">Vidéos <span class="arrow">↗</span></a></li>
-      <li><a href="about.html" class="hide-sm">À propos <span class="arrow">↗</span></a></li>
+      <li><a href="videos.html" class="active">Vidéos réalisées <span class="arrow">↗</span></a></li>
+      <li><a href="about.html" class="hide-sm">À propos de moi <span class="arrow">↗</span></a></li>
       <li><a href="contact.html">Contact <span class="arrow">↗</span></a></li>
     </ul>
   </nav>
@@ -26,19 +26,29 @@
   <main class="page-wrapper">
 
     <!-- HEADER -->
-    <header class="videos-header">
-      <h1>VIDÉOS<br>RÉALISÉES</h1>
-      <div style="text-align:right;">
-        <p style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:#b0b0a8; margin-bottom:0.5rem;">Navigation</p>
+    <header class="videos-header retro-hero-header">
+      <div>
+        <div class="retro-status">
+          <span class="retro-dot"></span>
+          SYSTÈME EN LIGNE — v2.0.2.6
+        </div>
+        <h1 class="hero-title">
+          <span>VIDÉOS</span>
+          <span>RÉALISÉES</span>
+        </h1>
+      </div>
+      <div style="text-align:right; z-index:1; position: relative;">
+        <p style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray-mid); margin-bottom:0.5rem;"><span style="color:var(--yellow); font-weight:700;">></span> Navigation</p>
         <div style="display:flex; flex-direction:column; gap:0.4rem;">
-          <a href="#courts" style="font-family:'Space Mono',monospace; font-size:0.78rem; text-decoration:none; color:#0a0a0a; border: 2px solid #0a0a0a; padding:0.3rem 0.8rem; text-align:center; transition: background 0.15s, color 0.15s;" onmouseover="this.style.background='#0a0a0a';this.style.color='#f5f5f0';" onmouseout="this.style.background='';this.style.color='#0a0a0a';">→ Formats courts</a>
-          <a href="#longs" style="font-family:'Space Mono',monospace; font-size:0.78rem; text-decoration:none; color:#0a0a0a; border: 2px solid #0a0a0a; padding:0.3rem 0.8rem; text-align:center; transition: background 0.15s, color 0.15s;" onmouseover="this.style.background='#0a0a0a';this.style.color='#f5f5f0';" onmouseout="this.style.background='';this.style.color='#0a0a0a';">→ Formats longs</a>
+          <a href="#courts" style="font-family:'Space Mono',monospace; font-size:0.75rem; text-decoration:none; color:var(--black); border: var(--border); padding:0.4rem 0.8rem; text-align:center; transition: background 0.15s, color 0.15s; background: var(--white);" onmouseover="this.style.background='var(--black)';this.style.color='var(--white)';this.style.transform='translate(-2px, -2px)';" onmouseout="this.style.background='var(--white)';this.style.color='var(--black)';this.style.transform='none';">→ Formats courts</a>
+          <a href="#longs" style="font-family:'Space Mono',monospace; font-size:0.75rem; text-decoration:none; color:var(--black); border: var(--border); padding:0.4rem 0.8rem; text-align:center; transition: background 0.15s, color 0.15s; background: var(--white);" onmouseover="this.style.background='var(--black)';this.style.color='var(--white)';this.style.transform='translate(-2px, -2px)';" onmouseout="this.style.background='var(--white)';this.style.color='var(--black)';this.style.transform='none';">→ Formats longs</a>
         </div>
       </div>
     </header>
 
     <!-- ===== FORMATS COURTS ===== -->
-    <section class="video-section" id="courts">
+    <div class="videos-container">
+      <section class="video-section" id="courts">
       <div class="video-section-header">
         <div class="video-section-title">
           Formats courts
@@ -47,42 +57,158 @@
         <span style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#b0b0a8;">< 3 min</span>
       </div>
 
-      <div class="video-grid">
+      <h3 class="subcategory-title" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('is-open');">
+        Vidéo d'entreprises
+        <span class="subcategory-arrow">▼</span>
+      </h3>
+      <div class="subcategory-wrapper">
+        <div class="subcategory-inner">
+          <div class="video-grid">
 
-        <!-- Carte placeholder 1 -->
-        <article class="video-card video-card-placeholder">
-          <div class="video-thumbnail">
-            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+        <!-- Vidéo 10 (Nouvelle) -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/XIztqyy7Uwg" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
           </div>
           <div class="video-meta">
-            <div class="video-meta-top">
-              <span class="video-type">Format court · 00:30</span>
-            </div>
-            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
-            <p class="video-desc">Description de votre vidéo...</p>
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/XIztqyy7Uwg" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
           </div>
         </article>
 
-        <!-- Carte placeholder 2 -->
-        <article class="video-card video-card-placeholder">
-          <div class="video-thumbnail">
-            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+        <!-- Vidéo 1 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/8SxROkbTCuM" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
           </div>
           <div class="video-meta">
-            <div class="video-meta-top">
-              <span class="video-type">Format court · 01:00</span>
-            </div>
-            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
-            <p class="video-desc">Description de votre vidéo...</p>
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/8SxROkbTCuM" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
           </div>
         </article>
 
-        <!-- Ajouter une vidéo -->
-        <div class="add-video-card">
-          <div class="add-icon">+</div>
-          <p class="add-text">Ajouter une vidéo</p>
+        <!-- Vidéo 2 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/7MS7y5DUXrY" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/7MS7y5DUXrY" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 3 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/yJy8VRseb-8" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/yJy8VRseb-8" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 4 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/Jv32hOpwCmo" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/Jv32hOpwCmo" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 5 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/N9XV5IPi5dU" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/N9XV5IPi5dU" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 6 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/gGJfDrJykRs" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/gGJfDrJykRs" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 7 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/QSkBJSSQfvA" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/QSkBJSSQfvA" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 8 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/HWwNmiwiyPQ" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/HWwNmiwiyPQ" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+        <!-- Vidéo 9 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/UXJvN4HMr4U" title="YouTube Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+          <div class="video-meta">
+            <h3 class="video-title">YouTube Short</h3>
+            <a href="https://youtube.com/shorts/UXJvN4HMr4U" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
+          </div>
+        </article>
+
+          </div>
         </div>
+      </div>
 
+      <h3 class="subcategory-title" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('is-open');">
+        Divertissement
+        <span class="subcategory-arrow">▼</span>
+      </h3>
+      <div class="subcategory-wrapper">
+        <div class="subcategory-inner">
+          <div class="video-grid">
+            <!-- Ajouter une vidéo -->
+            <div class="add-video-card">
+              <div class="add-icon">+</div>
+              <p class="add-text">Ajouter une vidéo divertissement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subcategory-title" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('is-open');">
+        Bien-être animal
+        <span class="subcategory-arrow">▼</span>
+      </h3>
+      <div class="subcategory-wrapper">
+        <div class="subcategory-inner">
+          <div class="video-grid">
+            <!-- Ajouter une vidéo -->
+            <div class="add-video-card">
+              <div class="add-icon">+</div>
+              <p class="add-text">Ajouter une vidéo bien-être animal</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -98,42 +224,31 @@
 
       <div class="video-grid">
 
-        <!-- Carte placeholder 1 -->
-        <article class="video-card video-card-placeholder">
-          <div class="video-thumbnail">
-            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+        <!-- Vidéo Longue 1 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/diY2pwXCbiU" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
           </div>
           <div class="video-meta">
-            <div class="video-meta-top">
-              <span class="video-type">Format long · 05:00</span>
-            </div>
-            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
-            <p class="video-desc">Description de votre vidéo...</p>
+            <h3 class="video-title">YouTube Video</h3>
+            <a href="https://youtu.be/diY2pwXCbiU" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
           </div>
         </article>
 
-        <!-- Carte placeholder 2 -->
-        <article class="video-card video-card-placeholder">
-          <div class="video-thumbnail">
-            <div class="video-play" aria-label="Lire la vidéo">▶</div>
+        <!-- Vidéo Longue 2 -->
+        <article class="video-card">
+          <div class="video-thumbnail" style="padding:0;">
+            <iframe src="https://www.youtube.com/embed/y_Gno7DG3pM" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
           </div>
           <div class="video-meta">
-            <div class="video-meta-top">
-              <span class="video-type">Format long · 10:00</span>
-            </div>
-            <h3 class="video-title" style="color:#b0b0a8;">[Titre à venir]</h3>
-            <p class="video-desc">Description de votre vidéo...</p>
+            <h3 class="video-title">YouTube Video</h3>
+            <a href="https://youtu.be/y_Gno7DG3pM" target="_blank" class="video-type" style="text-decoration:none; color:var(--blue);">▶ Voir sur YouTube</a>
           </div>
         </article>
-
-        <!-- Ajouter une vidéo -->
-        <div class="add-video-card">
-          <div class="add-icon">+</div>
-          <p class="add-text">Ajouter une vidéo</p>
-        </div>
 
       </div>
     </section>
+  </div>
 
   </main>
 
