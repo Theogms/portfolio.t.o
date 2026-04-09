@@ -22,10 +22,11 @@
   --font-display: 'Space Mono', monospace;
   --font-body: 'Space Grotesk', sans-serif;
 
-  /* ── Accent colors ── */
-  --yellow: #e8ff00;
-  --blue:   #0047ff;
-  --pink:   #ff0055;
+  /* ── Accent colors — saturated but not neon ── */
+  --yellow: #d4a017;    /* amber doré */
+  --blue:   #1a3fa0;    /* bleu saphir profond */
+  --pink:   #c0183c;    /* cramoisi vif */
+  --green:  #1b7a4a;    /* vert bouteille */
 }
 
 html {
@@ -54,16 +55,16 @@ body::before {
 }
 
 /* ── NAV ── */
-nav {
+nav#nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  padding: 0 2.5rem;
+  padding: 0 2.5rem 0 2.5rem;
   height: 60px;
   background: var(--white);
   border-bottom: var(--border);
@@ -76,6 +77,8 @@ nav {
   letter-spacing: 0.08em;
   text-decoration: none;
   color: var(--black);
+  display: flex;
+  align-items: center;
 }
 
 /* Le point du logo pulse en jaune */
@@ -100,13 +103,20 @@ nav {
   display: flex;
   gap: 0;
   list-style: none;
+  align-items: stretch;
+  height: 100%;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: stretch;
 }
 
 .nav-links li a {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 1.2rem;
+  padding: 0 1.2rem;
   border-left: var(--border);
   font-family: var(--font-display);
   font-size: 0.78rem;
@@ -114,7 +124,7 @@ nav {
   text-decoration: none;
   color: var(--black);
   transition: background 0.15s, color 0.15s;
-  height: 42px;
+  height: 100%;
 }
 
 .nav-links li:last-child a {
@@ -135,7 +145,10 @@ nav {
 /* ── PAGE WRAPPER ── */
 .page-wrapper {
   padding-top: 60px;
-  min-height: 100vh;
+  height: calc(100vh - 0px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* ===============================
@@ -144,15 +157,16 @@ nav {
 .home-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 60px);
+  flex: 1;
   border-bottom: var(--border);
+  min-height: 0;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 3.5rem;
+  padding: 2.5rem 3.5rem;
   border-right: var(--border);
   position: relative;
 }
@@ -165,18 +179,19 @@ nav {
   border: var(--border);
   display: inline-block;
   padding: 0.3rem 0.7rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
   background: var(--yellow);
+  align-self: flex-start;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 700;
   line-height: 1.0;
   letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-title span {
@@ -185,13 +200,13 @@ nav {
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-top: var(--border);
-  padding-top: 1.2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  padding-top: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
 }
 
 .hero-desc {
@@ -327,15 +342,15 @@ nav {
 
 .quick-links {
   border-top: var(--border);
-  border-bottom: var(--border);
+  flex-shrink: 0;
 }
 
 .quick-links h3 {
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 1rem 3.5rem;
+  padding: 0.6rem 3.5rem;
   border-bottom: var(--border);
 }
 
@@ -348,12 +363,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 2rem;
+  padding: 0.9rem 2rem;
   border-right: var(--border);
   text-decoration: none;
   color: var(--black);
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -372,26 +387,151 @@ nav {
 /* Scrolling marquee */
 .marquee-bar {
   border-top: var(--border);
-  border-bottom: var(--border);
   overflow: hidden;
   white-space: nowrap;
-  padding: 0.8rem 0;
+  padding: 1.4rem 0;
   background: var(--blue);
   color: var(--white);
+  flex-shrink: 0;
 }
 
 .marquee-inner {
   display: inline-block;
-  animation: marquee 18s linear infinite;
+  animation: marquee 22s linear infinite;
   font-family: var(--font-display);
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+/* ── RETRO ELEMENTS ── */
+
+/* CRT scanlines overlay on hero-right */
+.hero-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.06) 2px,
+    rgba(0,0,0,0.06) 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Retro corner brackets on graphic box */
+.graphic-box::before,
+.graphic-box::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  z-index: 3;
+}
+
+.graphic-box::before {
+  top: -4px;
+  left: -4px;
+  border-top: 3px solid var(--yellow);
+  border-left: 3px solid var(--yellow);
+}
+
+.graphic-box::after {
+  bottom: -4px;
+  right: -4px;
+  border-bottom: 3px solid var(--yellow);
+  border-right: 3px solid var(--yellow);
+}
+
+/* Retro status badge */
+.retro-status {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.retro-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(27,122,74,0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(27,122,74,0); }
+}
+
+/* Typewriter cursor on hero title */
+.hero-title span:last-child::after {
+  content: '_';
+  animation: cursor-blink 1s step-end infinite;
+  color: var(--yellow);
+  font-weight: 400;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Retro pixel-grid background stripe on hero-left bottom */
+.hero-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--yellow) 0px,
+    var(--yellow) 8px,
+    var(--black) 8px,
+    var(--black) 16px
+  );
+}
+
+/* Retro info strip */
+.retro-info-strip {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.retro-info-strip span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.retro-info-strip span::before {
+  content: '>';
+  color: var(--yellow);
+  font-weight: 700;
 }
 
 /* ===============================
@@ -897,12 +1037,13 @@ a.contact-value:nth-of-type(2):hover { color: var(--pink); }
    =============================== */
 footer {
   border-top: var(--border);
-  padding: 1.5rem 3.5rem;
+  padding: 0.9rem 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--black);
   color: var(--white);
+  flex-shrink: 0;
 }
 
 footer span {
@@ -953,7 +1094,7 @@ footer span {
    RESPONSIVE
    =============================== */
 @media (max-width: 768px) {
-  nav {
+  nav#nav {
     padding: 0 1.5rem;
   }
 
