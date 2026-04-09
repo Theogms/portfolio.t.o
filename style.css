@@ -173,6 +173,22 @@ nav#nav {
   padding: 2.5rem 3.5rem;
   border-right: var(--border);
   position: relative;
+  background: linear-gradient(120deg, rgba(212, 160, 23, 0.03) 0%, rgba(212, 160, 23, 0.09) 50%, rgba(212, 160, 23, 0.03) 100%);
+  background-size: 200% 200%;
+  animation: gradient-wave 7s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.hero-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--gray-mid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gray-mid) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 .hero-tag {
@@ -583,20 +599,6 @@ nav#nav {
 /* ===============================
    CONTACT PAGE
    =============================== */
-.contact-header {
-  border-bottom: var(--border);
-  padding: 3rem 3.5rem;
-  background: linear-gradient(120deg, rgba(212, 160, 23, 0.03) 0%, rgba(212, 160, 23, 0.09) 50%, rgba(212, 160, 23, 0.03) 100%);
-  background-size: 200% 200%;
-  animation: gradient-wave 7s ease-in-out infinite;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
 .contact-header h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: clamp(1.5rem, 4vw, 3rem);
@@ -790,8 +792,12 @@ a.contact-value:nth-of-type(2):hover { color: var(--pink); }
 /* ===============================
    ABOUT PAGE
    =============================== */
+/* ==================================================
+   COMMON HERO HEADERS (About, Videos, Contact)
+   ================================================== */
+.contact-header,
+.videos-header,
 .about-header {
-  border-bottom: var(--border);
   padding: 3rem 3.5rem;
   background: linear-gradient(120deg, rgba(212, 160, 23, 0.03) 0%, rgba(212, 160, 23, 0.09) 50%, rgba(212, 160, 23, 0.03) 100%);
   background-size: 200% 200%;
@@ -799,8 +805,16 @@ a.contact-value:nth-of-type(2):hover { color: var(--pink); }
   color: var(--black);
   position: relative;
   overflow: hidden;
+  border-bottom: var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
+.contact-header::before,
+.videos-header::before,
 .about-header::before {
   content: '';
   position: absolute;
@@ -809,8 +823,16 @@ a.contact-value:nth-of-type(2):hover { color: var(--pink); }
     linear-gradient(var(--gray-mid) 1px, transparent 1px),
     linear-gradient(90deg, var(--gray-mid) 1px, transparent 1px);
   background-size: 30px 30px;
-  opacity: 0.4;
+  opacity: 0.3;
   pointer-events: none;
+  z-index: 0;
+}
+
+.contact-header > *,
+.videos-header > *,
+.about-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .retro-hero-header {
@@ -1454,10 +1476,6 @@ footer span {
 
   .contact-header,
   .videos-header,
-  .about-header {
-    padding: 2rem 1.5rem;
-  }
-
   .about-header {
     padding: 2rem 1.5rem;
   }
