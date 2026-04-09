@@ -492,22 +492,7 @@ nav#nav {
   50% { opacity: 0; }
 }
 
-/* Retro pixel-grid background stripe on hero-left bottom */
-.hero-left::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--yellow) 0px,
-    var(--yellow) 8px,
-    var(--black) 8px,
-    var(--black) 16px
-  );
-}
+
 
 /* Retro info strip */
 .retro-info-strip {
